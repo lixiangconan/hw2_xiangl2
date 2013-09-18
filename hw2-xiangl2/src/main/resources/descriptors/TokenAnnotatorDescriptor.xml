@@ -2,9 +2,9 @@
 
 <analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
   <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
-  <primitive>true</primitive>  <annotatorImplementationName>edu.cmu.xiangl2.annotators.TextElementAnnotator</annotatorImplementationName>
+  <primitive>true</primitive>  <annotatorImplementationName>edu.cmu.xiangl2.annotators.TokenAnnotator</annotatorImplementationName>
   <analysisEngineMetaData>
-    <name>TextElementAnotatorDescriptor</name>
+    <name>TokenAnnotatorDescriptor</name>
     <description/>
     <version>1.0</version>
     <vendor/>
@@ -19,10 +19,12 @@
     <fsIndexCollection/>
     <capabilities>
       <capability>
-        <inputs/>
-        <outputs>
-          <type allAnnotatorFeatures="true">edu.cmu.deiis.types.Answer</type>
+        <inputs>
           <type allAnnotatorFeatures="true">edu.cmu.deiis.types.Question</type>
+          <type allAnnotatorFeatures="true">edu.cmu.deiis.types.Answer</type>
+        </inputs>
+        <outputs>
+          <type allAnnotatorFeatures="true">edu.cmu.deiis.types.Token</type>
         </outputs>
         <languagesSupported/>
       </capability>
