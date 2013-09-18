@@ -10,6 +10,9 @@
     <delegateAnalysisEngine key="TokenAnnotatorDescriptor">
       <import location="file:/E:/git/hw2_xiangl2/hw2-xiangl2/src/main/resources/descriptors/TokenAnnotatorDescriptor.xml"/>
     </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="NGramAnnotatorDescriptor">
+      <import location="file:/E:/git/hw2_xiangl2/hw2-xiangl2/src/main/resources/descriptors/NGramAnnotatorDescriptor.xml"/>
+    </delegateAnalysisEngine>
   </delegateAnalysisEngineSpecifiers>
   <analysisEngineMetaData>
     <name>hw2-xiangl2-aae</name>
@@ -22,6 +25,7 @@
       <fixedFlow>
         <node>TextElementAnnotatorDescriptor</node>
         <node>TokenAnnotatorDescriptor</node>
+        <node>NGramAnnotatorDescriptor</node>
       </fixedFlow>
     </flowConstraints>
     <fsIndexCollection/>
@@ -32,6 +36,7 @@
           <type allAnnotatorFeatures="true">edu.cmu.deiis.types.Question</type>
           <type allAnnotatorFeatures="true">edu.cmu.deiis.types.Answer</type>
           <type allAnnotatorFeatures="true">edu.cmu.deiis.types.Token</type>
+          <type allAnnotatorFeatures="true">edu.cmu.deiis.types.NGram</type>
         </outputs>
         <languagesSupported/>
       </capability>

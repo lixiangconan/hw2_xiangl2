@@ -26,7 +26,7 @@ public class TokenAnnotator extends JCasAnnotator_ImplBase {
       Question annotation = (Question) questionIter.next();
       TokenizerFactory<Word> factory = PTBTokenizerFactory.newTokenizerFactory();
       Tokenizer<Word> tokenizer = factory.getTokenizer(new StringReader(aJCas.getDocumentText()
-              .substring(annotation.getBegin()+2, annotation.getEnd())));
+              .substring(annotation.getBegin()+2, annotation.getEnd()-2)));
       while(tokenizer.hasNext()){
         Word word = tokenizer.next();
         Token token = new Token(aJCas);
@@ -44,7 +44,7 @@ public class TokenAnnotator extends JCasAnnotator_ImplBase {
       Answer annotation = (Answer) answerIter.next();
       TokenizerFactory<Word> factory = PTBTokenizerFactory.newTokenizerFactory();
       Tokenizer<Word> tokenizer = factory.getTokenizer(new StringReader(aJCas.getDocumentText()
-              .substring(annotation.getBegin()+4, annotation.getEnd())));
+              .substring(annotation.getBegin()+4, annotation.getEnd()-2)));
       while(tokenizer.hasNext()){
         Word word = tokenizer.next();
         Token token = new Token(aJCas);
