@@ -5,7 +5,7 @@
   <primitive>true</primitive>  <annotatorImplementationName>edu.cmu.xiangl2.annotators.NGramAnnotator</annotatorImplementationName>
   <analysisEngineMetaData>
     <name>NGramAnnotatorDescriptor</name>
-    <description/>
+    <description>Descriptor for the N-Gram Annotator, which can link continues tokens into ngram sequences.</description>
     <version>1.0</version>
     <vendor/>
     <configurationParameters/>

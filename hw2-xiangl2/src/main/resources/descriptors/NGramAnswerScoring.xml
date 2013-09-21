@@ -2,10 +2,10 @@
 
 <analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
   <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
-  <primitive>true</primitive>  <annotatorImplementationName>edu.cmu.xiangl2.annotators.TextElementAnnotator</annotatorImplementationName>
+  <primitive>true</primitive>  <annotatorImplementationName>edu.cmu.xiangl2.annotators.NGramAnswerScoring</annotatorImplementationName>
   <analysisEngineMetaData>
-    <name>TextElementAnnotatorDescriptor</name>
-    <description>Descriptor for the Text Element Annotator, which can annotate questions and answers in the input file.</description>
+    <name>NGramAnswerScoring</name>
+    <description>Descriptor for the Ngram Answer Scoring process. This process uses a scoring method based on N-Gram hit rates between sentences.   </description>
     <version>1.0</version>
     <vendor/>
     <configurationParameters/>
@@ -19,10 +19,13 @@
     <fsIndexCollection/>
     <capabilities>
       <capability>
-        <inputs/>
-        <outputs>
-          <type allAnnotatorFeatures="true">edu.cmu.deiis.types.Answer</type>
+        <inputs>
           <type allAnnotatorFeatures="true">edu.cmu.deiis.types.Question</type>
+          <type allAnnotatorFeatures="true">edu.cmu.deiis.types.NGram</type>
+          <type allAnnotatorFeatures="true">edu.cmu.deiis.types.Answer</type>
+        </inputs>
+        <outputs>
+          <type allAnnotatorFeatures="true">edu.cmu.deiis.types.AnswerScore</type>
         </outputs>
         <languagesSupported/>
       </capability>

@@ -13,10 +13,16 @@
     <delegateAnalysisEngine key="NGramAnnotatorDescriptor">
       <import location="file:/E:/git/hw2_xiangl2/hw2-xiangl2/src/main/resources/descriptors/NGramAnnotatorDescriptor.xml"/>
     </delegateAnalysisEngine>
+  <delegateAnalysisEngine key="NGramAnswerScoring">
+      <import location="file:/E:/git/hw2_xiangl2/hw2-xiangl2/src/main/resources/descriptors/NGramAnswerScoring.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="EvaluationDescriptor">
+      <import location="file:/E:/git/hw2_xiangl2/hw2-xiangl2/src/main/resources/descriptors/EvaluationDescriptor.xml"/>
+    </delegateAnalysisEngine>
   </delegateAnalysisEngineSpecifiers>
   <analysisEngineMetaData>
     <name>hw2-xiangl2-aae</name>
-    <description/>
+    <description>Descriptor for the aggregate annalysis engine. This analysis engine call Text Element Annotator, Token Annotator, NGram Annotator, NGram Answer Scoring process and Evalustor in a proper order, and finally output the answers to the question.</description>
     <version>1.0</version>
     <vendor/>
     <configurationParameters/>
@@ -26,6 +32,8 @@
         <node>TextElementAnnotatorDescriptor</node>
         <node>TokenAnnotatorDescriptor</node>
         <node>NGramAnnotatorDescriptor</node>
+      <node>NGramAnswerScoring</node>
+        <node>EvaluationDescriptor</node>
       </fixedFlow>
     </flowConstraints>
     <fsIndexCollection/>
@@ -37,6 +45,7 @@
           <type allAnnotatorFeatures="true">edu.cmu.deiis.types.Answer</type>
           <type allAnnotatorFeatures="true">edu.cmu.deiis.types.Token</type>
           <type allAnnotatorFeatures="true">edu.cmu.deiis.types.NGram</type>
+        <type allAnnotatorFeatures="true">edu.cmu.deiis.types.AnswerScore</type>
         </outputs>
         <languagesSupported/>
       </capability>
