@@ -26,9 +26,9 @@ public class NGramAnswerScoring extends JCasAnnotator_ImplBase {
    * <p>
    * This method assign a score to each answer to show how likely it could be a correct answer. The
    * score is calculated using N-Gram hit rate. That is to say, the system counts the number of
-   * N-Gram annotations in the answer sentences that could be matched with an N-Gram annotations in
+   * N-Gram annotations in the answer sentences that could be matched with N-Gram annotations in
    * the question sentence, then calculates the ratio of matched N-Gram annotation number to total
-   * N-Gram annotation number
+   * N-Gram annotation number.
    */
   @Override
   public void process(JCas aJCas) throws AnalysisEngineProcessException {

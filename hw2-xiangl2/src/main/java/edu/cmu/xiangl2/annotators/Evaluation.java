@@ -25,7 +25,7 @@ public class Evaluation extends JCasAnnotator_ImplBase {
    * <p>
    * This method firstly order the answers according to their score. Then, N sentences with the
    * highest scores are chosen as the output answers. Finally, it counts how many chosen answers are
-   * actually correct, and calculate a precision to measure the system performance.
+   * actually correct, and calculates a precision to measure the system performance.
    */
   @Override
   public void process(JCas aJCas) throws AnalysisEngineProcessException {
